@@ -1,0 +1,37 @@
+name: Monitoramento Diario Combustiveis Bahia
+
+on:
+  schedule:
+    # 10:30 UTC = 07:30 no horário da Bahia (UTC-3)
+    - cron: '30 10 * * *'
+  workflow_dispatch: # Permite testar manualmente com 1 clique
+
+jobs:
+  atualizar-combustiveis:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar bibliotecas
+        run: pip install google-genai requests beautifulsoup4 lxml python-dotenv tzdata
+
+      - name: Executar monitoramento de combustíveis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python monitor_combustiveis_ba.py
+
+      - name: Salvar JSON atualizado e histórico no GitHub
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add combustiveis_bahia_atual.json historico_diario/
+          git commit -m "Atualiza tabela de combustiveis Bahia" || exit 0
+          git push
