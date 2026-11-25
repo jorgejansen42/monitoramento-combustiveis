@@ -17,46 +17,50 @@ FUSO_BAHIA = ZoneInfo("America/Bahia")
 if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
     raise ValueError(f"Verifique TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID no arquivo: {pasta_projeto / '.env'}")
 
-# 2. Mapa das Principais Cidades da Bahia, Bandeira Mais Atraente na Rota e Estrutura de Café/Conveniência
+# 2. Mapa das Principais Cidades da Bahia (Sem restrição de bandeira — foco em corredor de menor preço + café)
 RECOMENDACAO_POSTOS_BA = {
     "Salvador": {
-        "bandeira": "Rede Menor Preço / Postos Ipiranga (Av. Paralela e BR-324)",
-        "conveniencia": "AM/PM completa — café expresso, pão de queijo na hora e área climatizada"
+        "local_atraente": "Postos de alto giro na Av. Paralela, Av. Suburbana e saída da BR-324 (preços mais competitivos da capital)",
+        "conveniencia": "Lojas de conveniência 24h com café expresso, pão de queijo na hora e área climatizada"
+    },
+    "Lauro de Freitas": {
+        "local_atraente": "Postos ao longo da Estrada do Coco (BA-099 / região do Aeroporto até Abrantes, onde há maior disputa de preço)",
+        "conveniencia": "Conveniência completa na BA-099 — ótimo café expresso e parada rápida antes do pedágio"
     },
     "Camaçari": {
-        "bandeira": "Postos Shell / Rede Larco (Via Parafuso / Polo)",
-        "conveniencia": "Shell Select — ótimo café coado/expresso e salgados rápidos"
+        "local_atraente": "Postos de corredor logístico na Via Parafuso (BA-535) e acesso ao Polo Industrial",
+        "conveniencia": "Conveniência ampla — café coado/expresso e salgados rápidos"
     },
     "Feira de Santana": {
-        "bandeira": "Postos São Gonçalo / Rede Shell (Entronc. BR-324 / BR-116)",
-        "conveniencia": "Conveniência 24h completa — parada obrigatória para café e banheiro limpo"
+        "local_atraente": "Postos de grande fluxo no Entroncamento BR-324 / BR-116 e Av. Contorno (preço abaixo da média estadual)",
+        "conveniencia": "Conveniência 24h completa — parada estratégica para café e estrutura limpa"
     },
     "Alagoinhas": {
-        "bandeira": "Rede Postos Petrobras / Larco (BR-101 — polo mais barato da BA)",
-        "conveniencia": "BR Mania — café expresso e lanches regionais (beiju/bolo)"
+        "local_atraente": "Postos às margens da BR-101 (polo mais barato da Bahia pela proximidade com a refinaria)",
+        "conveniencia": "Conveniência e lanchonetes regionais — café expresso e beiju/bolo na hora"
     },
     "Vitória da Conquista": {
-        "bandeira": "Rede Postos Shell / Ipiranga (Anel Rodoviário BR-116)",
-        "conveniencia": "Select / AM/PM — café quente perfeito para o friozinho da serra"
+        "local_atraente": "Postos de abastecimento pesado no Anel Rodoviário (BR-116) e saída para Brumado",
+        "conveniencia": "Conveniência climatizada — café quente ideal para o clima da serra"
     },
     "Barreiras": {
-        "bandeira": "Rede Postos Mimosa / Petrobras (BR-242)",
-        "conveniencia": "BR Mania / Lanchonete de estrada — café forte e estrutura ampla para frota"
+        "local_atraente": "Postos de corredor agrícola na BR-242 (saída para Luís Eduardo Magalhães)",
+        "conveniencia": "Conveniência de estrada — café forte e estrutura ampla para abastecimento"
     },
     "Juazeiro": {
-        "bandeira": "Postos Shell / Rede Grande Rio (BR-407)",
-        "conveniencia": "Shell Select climatizada — café gelado ou expresso e wifi"
+        "local_atraente": "Postos de grande fluxo na BR-407 e acesso à Ponte Presidente Dutra",
+        "conveniencia": "Conveniência climatizada — café gelado ou expresso e wifi"
     },
     "Ilhéus": {
-        "bandeira": "Postos Ipiranga / Rede Gabriela (Rodovia Ilhéus-Itabuna)",
-        "conveniencia": "AM/PM — café expresso e parada rápida"
+        "local_atraente": "Postos na Rodovia Ilhéus-Itabuna (BR-415) e saída norte pela BA-001",
+        "conveniencia": "Conveniência rápida — café expresso e lanches"
     },
     "Porto Seguro": {
-        "bandeira": "Rede Postos Petrobras / Cabral (BR-367)",
-        "conveniencia": "BR Mania — café e lanches antes de pegar a BR-101"
+        "local_atraente": "Postos na BR-367 (trecho de maior concorrência entre Porto Seguro e Eunápolis)",
+        "conveniencia": "Conveniência completa — café e lanches antes de pegar a BR-101"
     },
     "Teixeira de Freitas": {
-        "bandeira": "Rede Postos Capixaba / Shell (BR-101)",
+        "local_atraente": "Postos de corredor rodoviário na BR-101 (melhor disputa de preço do Extremo Sul)",
         "conveniencia": "Conveniência 24h com café e restaurante de apoio"
     }
 }
@@ -82,7 +86,7 @@ def gerar_boletim_resumido() -> str:
         f"📅 _Atualizado em: {data_ref}_",
         f"📊 *Média BA:* Gasolina R$ {resumo.get('media_estado_gasolina', 0):.2f} | Diesel S10 R$ {resumo.get('media_estado_diesel_s10', 0):.2f}",
         "",
-        "📍 *ONDE ABASTECER E TOMAR AQUELE CAFÉ HOJE:*"
+        "📍 *ONDE ABASTECER COM MELHOR VALOR E TOMAR UM CAFÉ:*"
     ]
 
     for item in municipios:
@@ -96,7 +100,7 @@ def gerar_boletim_resumido() -> str:
 
             linhas.append(f"\n🏙️ *{cidade}*")
             linhas.append(f"• *Valores:* Gas. R$ {gas:.2f} | Etanol R$ {eta:.2f} | S10 R$ {s10:.2f} _(Melhor leve: {vantagem})_")
-            linhas.append(f"• *Rede atraente:* {info_posto['bandeira']}")
+            linhas.append(f"• *Onde buscar menor preço:* {info_posto['local_atraente']}")
             linhas.append(f"• ☕ *Parada:* {info_posto['conveniencia']}")
 
     linhas.append("\n✅ _Boa rota e bom café!_")
