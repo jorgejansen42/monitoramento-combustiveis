@@ -30,6 +30,12 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python monitor_combustiveis_ba.py
 
+      - name: Enviar Boletim de Combustíveis no Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python boletim_combustiveis_telegram.py
+
       - name: Salvar JSON atualizado e histórico no GitHub
         run: |
           git config user.name "GitHub Actions Bot"
