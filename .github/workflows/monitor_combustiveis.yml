@@ -4,6 +4,8 @@ on:
   schedule:
     # 10:30 UTC = 07:30 no horário da Bahia (UTC-3)
     - cron: '30 10 * * *'
+    # 17:00 UTC = 14:00 no horário da Bahia (UTC-3)
+    - cron: '0 17 * * *'
   workflow_dispatch: # Permite testar manualmente com 1 clique
 
 jobs:
