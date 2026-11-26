@@ -123,7 +123,7 @@ def gerar_fallback_local_2026(noticias_lista: list) -> dict:
             "diesel_s10": d_s10,
             "diesel_s500": d_s500,
             "relacao_etanol_gasolina_pct": rel_pct,
-            "combustivel_leve_vantajoso": avantajoso,
+            "combustivel_leve_vantajoso": vantajoso,
             "spread_diesel_vs_media_ba": spread_diesel,
             "classificacao_custo_abastecimento": classif,
             "variacao_semanal_pct": -0.3
