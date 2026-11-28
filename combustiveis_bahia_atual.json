@@ -1,14 +1,14 @@
 {
-  "data_atualizacao": "28/11/2026 08:21",
+  "data_atualizacao": "28/11/2026 14:42",
   "ano_referencia": 2026,
   "fonte_principal": "ANP (LPC) / Refinaria de Mataripe (Acelen) / Monitoramento Web",
   "resumo_mercado_ba": {
     "media_estado_gasolina": 6.64,
     "media_estado_etanol": 4.61,
     "media_estado_diesel_s10": 7.59,
-    "ultimo_movimento_refinaria": "Estabilização de preços após ajustes de novembro, com foco na logística de escoamento via BR-324.",
-    "melhor_polo_diesel_s10": "Camaçari",
-    "melhor_polo_gasolina": "Camaçari"
+    "ultimo_movimento_refinaria": "Acelen promoveu redução nos preços de saída da refinaria em 23/11, refletindo a volatilidade do mercado internacional e ajuste fiscal.",
+    "melhor_polo_diesel_s10": "Feira de Santana",
+    "melhor_polo_gasolina": "Feira de Santana"
   },
   "tabela_precos_municipios": [
     {
@@ -135,7 +135,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.08,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.0
+      "variacao_semanal_pct": 0.1
     },
     {
       "cidade": "Juazeiro",
@@ -153,7 +153,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.11,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.1
+      "variacao_semanal_pct": 0.2
     },
     {
       "cidade": "Senhor do Bonfim",
@@ -171,7 +171,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.03,
       "classificacao_custo_abastecimento": "Na Média",
-      "variacao_semanal_pct": -0.1
+      "variacao_semanal_pct": 0.0
     },
     {
       "cidade": "Jacobina",
@@ -189,7 +189,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.02,
       "classificacao_custo_abastecimento": "Na Média",
-      "variacao_semanal_pct": -0.1
+      "variacao_semanal_pct": 0.0
     },
     {
       "cidade": "Irecê",
@@ -207,7 +207,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.09,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.0
+      "variacao_semanal_pct": 0.1
     },
     {
       "cidade": "Seabra",
@@ -225,7 +225,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.07,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.0
+      "variacao_semanal_pct": 0.1
     },
     {
       "cidade": "Barreiras",
@@ -243,7 +243,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.15,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.2
+      "variacao_semanal_pct": 0.3
     },
     {
       "cidade": "Luís Eduardo Magalhães",
@@ -261,7 +261,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.14,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.2
+      "variacao_semanal_pct": 0.3
     },
     {
       "cidade": "Bom Jesus da Lapa",
@@ -279,7 +279,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.12,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.1
+      "variacao_semanal_pct": 0.2
     },
     {
       "cidade": "Guanambi",
@@ -297,7 +297,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.06,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.0
+      "variacao_semanal_pct": 0.1
     },
     {
       "cidade": "Brumado",
@@ -315,7 +315,7 @@
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.04,
       "classificacao_custo_abastecimento": "Na Média",
-      "variacao_semanal_pct": -0.1
+      "variacao_semanal_pct": 0.0
     },
     {
       "cidade": "Vitória da Conquista",
@@ -326,14 +326,14 @@
       "longitude": -40.8442,
       "gasolina_comum": 6.62,
       "gasolina_aditivada": 6.79,
-      "etanol": 4.59,
+      "etanol": 4.62,
       "diesel_s10": 7.57,
       "diesel_s500": 7.45,
-      "relacao_etanol_gasolina_pct": 69.3,
+      "relacao_etanol_gasolina_pct": 69.8,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": -0.02,
       "classificacao_custo_abastecimento": "Na Média",
-      "variacao_semanal_pct": -0.3
+      "variacao_semanal_pct": -0.1
     },
     {
       "cidade": "Jequié",
@@ -344,14 +344,14 @@
       "longitude": -40.0836,
       "gasolina_comum": 6.59,
       "gasolina_aditivada": 6.76,
-      "etanol": 4.56,
+      "etanol": 4.59,
       "diesel_s10": 7.54,
       "diesel_s500": 7.42,
-      "relacao_etanol_gasolina_pct": 69.2,
+      "relacao_etanol_gasolina_pct": 69.7,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": -0.05,
       "classificacao_custo_abastecimento": "Na Média",
-      "variacao_semanal_pct": -0.4
+      "variacao_semanal_pct": -0.3
     },
     {
       "cidade": "Santo Antônio de Jesus",
@@ -362,14 +362,14 @@
       "longitude": -39.2614,
       "gasolina_comum": 6.56,
       "gasolina_aditivada": 6.73,
-      "etanol": 4.53,
+      "etanol": 4.56,
       "diesel_s10": 7.51,
       "diesel_s500": 7.39,
-      "relacao_etanol_gasolina_pct": 69.1,
+      "relacao_etanol_gasolina_pct": 69.5,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": -0.08,
       "classificacao_custo_abastecimento": "Econômico (Abastecer Aqui)",
-      "variacao_semanal_pct": -0.5
+      "variacao_semanal_pct": -0.4
     },
     {
       "cidade": "Valença",
@@ -380,10 +380,10 @@
       "longitude": -39.0731,
       "gasolina_comum": 6.65,
       "gasolina_aditivada": 6.82,
-      "etanol": 4.62,
+      "etanol": 4.65,
       "diesel_s10": 7.6,
       "diesel_s500": 7.48,
-      "relacao_etanol_gasolina_pct": 69.5,
+      "relacao_etanol_gasolina_pct": 69.9,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.01,
       "classificacao_custo_abastecimento": "Na Média",
@@ -398,10 +398,10 @@
       "longitude": -39.0464,
       "gasolina_comum": 6.69,
       "gasolina_aditivada": 6.86,
-      "etanol": 4.66,
+      "etanol": 4.69,
       "diesel_s10": 7.64,
       "diesel_s500": 7.52,
-      "relacao_etanol_gasolina_pct": 69.7,
+      "relacao_etanol_gasolina_pct": 70.1,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.05,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
@@ -416,10 +416,10 @@
       "longitude": -39.2781,
       "gasolina_comum": 6.67,
       "gasolina_aditivada": 6.84,
-      "etanol": 4.64,
+      "etanol": 4.67,
       "diesel_s10": 7.62,
       "diesel_s500": 7.5,
-      "relacao_etanol_gasolina_pct": 69.6,
+      "relacao_etanol_gasolina_pct": 70.0,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.03,
       "classificacao_custo_abastecimento": "Na Média",
@@ -434,14 +434,14 @@
       "longitude": -39.0643,
       "gasolina_comum": 6.8,
       "gasolina_aditivada": 6.97,
-      "etanol": 4.77,
+      "etanol": 4.78,
       "diesel_s10": 7.75,
       "diesel_s500": 7.63,
-      "relacao_etanol_gasolina_pct": 70.1,
+      "relacao_etanol_gasolina_pct": 70.3,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.16,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.3
+      "variacao_semanal_pct": 0.4
     },
     {
       "cidade": "Eunápolis",
@@ -452,14 +452,14 @@
       "longitude": -39.5821,
       "gasolina_comum": 6.73,
       "gasolina_aditivada": 6.9,
-      "etanol": 4.7,
+      "etanol": 4.71,
       "diesel_s10": 7.68,
       "diesel_s500": 7.56,
-      "relacao_etanol_gasolina_pct": 69.8,
+      "relacao_etanol_gasolina_pct": 70.0,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.09,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.0
+      "variacao_semanal_pct": 0.2
     },
     {
       "cidade": "Teixeira de Freitas",
@@ -470,14 +470,14 @@
       "longitude": -39.7419,
       "gasolina_comum": 6.77,
       "gasolina_aditivada": 6.94,
-      "etanol": 4.74,
+      "etanol": 4.75,
       "diesel_s10": 7.72,
       "diesel_s500": 7.6,
-      "relacao_etanol_gasolina_pct": 70.0,
+      "relacao_etanol_gasolina_pct": 70.2,
       "combustivel_leve_vantajoso": "Etanol",
       "spread_diesel_vs_media_ba": 0.13,
       "classificacao_custo_abastecimento": "Caro (Evitar se Possível)",
-      "variacao_semanal_pct": 0.1
+      "variacao_semanal_pct": 0.3
     }
   ]
 }
